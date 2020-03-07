@@ -13,3 +13,6 @@ Style/Documentation:
 
 Metrics/MethodLength:
   Max: 30
+
+StringLiterals:
+  Enabled: false

@@ -47,6 +47,7 @@ class CartsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to store_path }
+      format.js
       format.json { head :no_content }
     end
   end

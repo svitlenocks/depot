@@ -32,7 +32,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
       )
     end
 
-    assert_redirected_to order_url(Order.last)
+    assert_redirected_to store_path
   end
 
   test "should show order" do

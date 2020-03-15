@@ -9,5 +9,5 @@
   </tr>
 </table>
 
-<%= button_to "Checkout", new_order_path, method: :get %>
+<%= button_to "Checkout", new_order_path, { class: "button_margin_bottom", method: :get } %>
 <%= button_to "Empty cart", cart, method: :delete, remote: true %>

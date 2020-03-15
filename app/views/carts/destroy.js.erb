@@ -1,3 +1,5 @@
 $('#cart').html("<%= escape_javascript render(@cart) %>");
 
 $('#cart').hide('blind', 1000);
+
+if ($('.depot_form').length == 1) { $(window.location.replace("<%= store_path %>")); };

@@ -3,7 +3,9 @@
 <% else %>
 <tr>
 <% end %>
-  <td><%= link_to fa_icon("minus"), line_item_path(line_item), method: :delete, remote: true %></td>
+  <% if action_name != "shipped" %>
+    <td><%= link_to fa_icon("minus"), line_item_path(line_item), method: :delete, remote: true %></td>
+  <% end %>
   <td><%= line_item.quantity %>&times;</td>
   <td><%= line_item.product.title %></td>
   <td class="item_price"><%= number_to_currency(line_item.total_price) %></td>

@@ -1,0 +1,10 @@
+<h1>Order from Pragmatic Order shipped</h1>
+
+<p>
+  This message notifies you that we have sent your recent order:
+</p>
+
+<table>
+  <tr><th colspan="2">Quantity</th><th>Description</th></tr>
+  <%= render @order.line_items %>
+</table>

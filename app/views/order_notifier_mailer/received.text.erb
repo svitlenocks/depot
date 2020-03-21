@@ -1,0 +1,10 @@
+Respected <%= @order.name %>
+
+The administration of the Pragmatic Store thanks you for your recent order.
+
+You ordered the following product:
+
+<%= render @order.line_items %>
+
+When your order is shipped, we will send you a separate email
+message.

@@ -28,6 +28,12 @@ class UsersController < ApplicationController
   end
 
   def update
+    unless @user.authenticate(params[:user][:current_password])
+      redirect_to users_path
+      flash[:notice] = "Wrong current password"
+      return
+    end
+
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to users_url, notice: "User #{@user.name} was successfully updated." }

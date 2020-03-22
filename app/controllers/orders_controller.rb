@@ -12,6 +12,8 @@ class OrdersController < ApplicationController
   def show; end
 
   def new
+    @options_for_select = format_options_for_select
+
     if @cart.line_items.empty?
       redirect_to store_path, notice: "Your cart is empty"
 
@@ -34,7 +36,7 @@ class OrdersController < ApplicationController
 
         OrderNotifierMailer.received(@order).deliver
 
-        format.html { redirect_to store_url, notice: 'Thank you for your order.' }
+        format.html { redirect_to store_url, notice: t(".thanks") }
         format.json { render :show, status: :created, location: @order }
       else
         @cart = Cart.find(session[:cart_id])
@@ -66,6 +68,12 @@ class OrdersController < ApplicationController
   end
 
   private
+
+  def format_options_for_select
+    Order::PAYMENT_TYPES.map do |type|
+      [t(".#{type}"), type]
+    end
+  end
 
   def set_order
     @order = Order.find(params[:id])

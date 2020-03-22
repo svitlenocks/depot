@@ -1,0 +1,52 @@
+ru:
+  layouts:
+    application:
+      title: Pragmatic Bookshelf
+      home: Домой
+      questions: Вопросы
+      news: Новости
+      contact: Связаться
+      orders: Заказы
+      products: Товары
+      users: Администраторы
+  store:
+    index:
+      title: Ваша прагматичная книжная полка
+      add: Добавить в корзину
+  carts:
+    cart:
+      title: Ваша корзина
+      checkout: Оформить заказ
+      empty_cart: Очистить корзину
+  orders:
+    new:
+      legend: Пожалуйста, введите ваши данные
+      Check: Чек
+      Credit card: Кредитная карта
+      Purchase order: Заказ на покупку
+    form:
+      name: Имя
+      address: Адрес
+      email: Электронная почта
+      pay_type: Оплата
+      pay_prompt: Выберите способ оплаты
+      submit: Отправить заказ
+    create:
+      thanks: Спасибо за ваш заказ
+  activerecord:
+    errors:
+      messages:
+        inclusion: выберите из списка
+        blank: не может быть пустым
+    attributes:
+      order:
+        name: Имя
+        address: Адрес
+        email: Электронная почта
+        pay_type: Способ оплаты
+  errors:
+    template:
+      body: Возникли некоторые проблемы
+      header:
+        one: Возникла ошибка при отправке
+        other: "%{count} ошибки вознкли при отправке"
